@@ -1,11 +1,14 @@
 @import "./normalize";
-@import "./fonts";
 @import "./variables";
+@import "./fonts";
 @import "./general";
+@import "./mixins";
 @import "./header";
 
-// @import "./blocks/blocks";
+
+// .....>>>>>>>>>>>?>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 @import "./index/main";
 @import "./single/main";
 
+@import "./footer";

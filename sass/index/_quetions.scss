@@ -1,14 +1,14 @@
 .quetions{
     margin-top: 160px;
     margin-bottom: 254px;
-    background-color: #a9c2be;
+    background-color: $quetionbg;
     &_items{
         display: flex;
     }
     &_form{
         max-width: 470px;
         max-height: 417px;
-        background-color: $main-white;
+        background-color: $white;
         padding: 31px 50px 17px 50px;
         transform: translate(-65px, 33px);
         position: relative;
@@ -19,9 +19,7 @@
             height: 131px;
             display: block;
             background-image: url(./../images/o.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position:center; 
+            @include bg (contain, center)
             top: -27px;
             left: -75px;
         }
@@ -31,7 +29,7 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 16px;
-            color: $main-white;
+            color: $orange;
             margin-bottom: 15px;
         }
         &_title{
@@ -39,28 +37,22 @@
             font-size: 28px;
             line-height: 33px;
             text-transform: uppercase;
-            color: $main-black;
+            color: $darkblack;
             margin-bottom: 20px;
         }
     }
     .quetions_form{
         display: flex;
         flex-direction: column;
-        
-
     }
     .quetions_form input{
-        border: none;
-        outline: 0;
-        border-bottom:  1px solid #d1d1d1;
+        @include input
         width: 371px;
         padding-bottom: 5px;
         margin-bottom: 25px;
     }
     .form_checkbox{
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
+        @include flex
         margin-bottom: 20px;
         .checkboxtext{
             font-weight: 400;
@@ -90,13 +82,14 @@
 @media only screen and (max-width: 376px) { 
     .quetions{
         margin-top: 90px;
-        background-color: #a9c2be;
+        background-color: $quetionbg;
         padding: 56px 0 56px 0;
         &_form{
             max-width: 340px;
             max-height: 370px;
-            background-color: $main-white;
+            background-color: $white;
             padding: 31px 30px 17px 30px;
+            // transform: translate(4px, 56px);
             transform: none;
             &::before{
                 display: none;
@@ -118,17 +111,13 @@
             }
         }
         .quetions_form input{
-            border: none;
-            outline: 0;
-            border-bottom:  1px solid #d1d1d1;
+            @include input
             max-width: 268px;
             padding-bottom: 5px;
             margin-bottom: 20px;
         }
         .form_checkbox{
-            display: flex;
-            justify-content: space-between;
-            align-items: center; 
+            @include flex
             .checkboxtext{
                 font-weight: 400;
                 font-size: 11px;

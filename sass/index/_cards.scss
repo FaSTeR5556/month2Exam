@@ -6,13 +6,11 @@
         flex-wrap: wrap;
         gap: 30px;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
+        @include flex
         
     }
     &_list{
-        background-color: #F2F3F5;
+        background-color: $cardbg;
         display: flex;
         align-items: center;
         padding: 0 11px 0 1px;
@@ -20,9 +18,7 @@
         min-height: 278px;
     }
     &_link{
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
+        @include flex
     }
 
     .card_wrapper{
@@ -59,9 +55,7 @@
     gap: 15px;
     margin-bottom: 60px;
     .card_button{
-        border: none;
-        background-color: transparent;
-        outline: 0; 
+        @include button
         font-size: 20px;
         line-height: 110%;
         display: flex;
@@ -69,7 +63,7 @@
         color: rgba(87, 83, 83, 0.5);
     }
     .active{
-        color:#4b4844;
+        color: $black;
     }
 }
 
@@ -92,9 +86,7 @@
             flex-wrap: wrap;
             gap: 30px;
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center; 
+            @include flex
             
         }
         &_list{
@@ -105,9 +97,7 @@
             margin-bottom: 70px;
         }
         &_link{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flex;
             // flex-direction: column;
             width: 140px;
             height: 165px;
@@ -117,7 +107,7 @@
             width: 150px;
             height: auto;
             mix-blend-mode: darken;
-            background-color: #F2F3F5;
+            background-color: $cardbg;
         }
         &_link_img{
             mix-blend-mode: darken;
@@ -134,6 +124,7 @@
             left: 0;
             right: 0;
             bottom: -33px;
+            // transform: translate(45px, 26px);
         }
         &_link_subtitle{
             display: none;
